@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article{
+            border : 2px solid tomato;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM</h3>
+            <article >
+                <h3>article-1</h3>
+                <p id="bestSeller" title="I am the best author" class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, praesentium voluptatibus ex inventore quibusdam eum consectetur dolore doloremque corporis dicta suscipit expedita quod porro et nihil, ullam voluptas soluta repudiandae.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Harum, repellat? Ipsum, quod minus sunt corporis nisi ullam sint in eaque fuga porro expedita adipisci aliquam tempore? Nesciunt numquam, ipsam perspiciatis a dolor vel eius ipsum illum natus omnis?</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Eveniet maxime sapiente ratione nobis fugit? Error, quaerat minima reprehenderit veniam voluptate cum quis provident accusantium ducimus, dolorem alias quidem sint possimus a culpa sequi quia! Iste voluptates asperiores reprehenderit.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        // var user = {name:'jalali Set', song : 'kakatua', members : '5'};
+        // // DOM ==> Document Object Model
+        // console.log(document.body);
+        document.body.style.backgroundColor=  'tomato';
+        var authors = document.querySelectorAll('.special h3'); 
+        for(var i = 0;i<authors.length;i++){
+            var element = authors[i];
+            // console.log(element.innerHTML);
+            element.innerHTML = 'lekhok-'+(i+1);
+            element.setAttribute('title','All authors are same');
+            element.style.backgroundColor = 'lightblue';
+            element.style.margin = '10px';
+        }
+
+    </script>
+</body>
+</html>
