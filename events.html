@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javascript</title>
+</head>
+
+<body>
+    <!-- <h1 onClick="alert('This is Heading')">Exploring Events</h1> -->
+    <h1 onclick="handleClick()">Exploring Events</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, unde. Odio dolor id aperiam, ex sunt ut aut nulla praesentium quaerat earum minima. Sit minima commodi illum velit quisquam! Maxime illum sint doloremque veniam, debitis ipsum obcaecati voluptatibus repellat dolor!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, provident.</p>
+    <button onclick="handleClick()">Click me-0</button>
+    <button onmouseout="handleClick()">Come on</button>
+    <button id="second">Click me-1</button>
+    <button>Click me-2</button>
+    <button id="last">Click me-3</button>
+    <script>
+        document.getElementById('last').addEventListener('click', function() {
+            document.body.style.color = 'tomato';
+        });
+        // function handleClick() {
+        //     document.body.style.backgroundColor = 'cyan';
+        // }
+        // const secondButton = document.getElementById('second');
+        // secondButton.addEventListener('click',handleClick);
+        // secondButton.onclick = function(){
+        //     console.log('Second person clicked');
+        // }
+        // secondButton.onclick = handleClick;
+    </script>
+</body>
+
+</html>
